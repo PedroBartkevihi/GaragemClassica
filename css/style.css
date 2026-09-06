@@ -524,3 +524,92 @@ section.servicos-descricao{
 	font-style: italic;
 	color: rgba(255,255,255,0.85);
 }
+
+/**Contato**/
+
+section.contato{
+	padding: var(--espaco-secao) 2%;
+}
+
+section.contato form{
+	width: 100%;
+	max-width: 640px;
+	margin: 44px auto 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.input-wraper{
+	display: flex;
+	flex-direction: column;
+}
+
+.w100{
+	width: 100%;
+}
+
+.w50{
+	width: calc(50% - 8px);
+}
+
+.input-wraper label{
+	margin-bottom: 6px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.8rem;
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--cor-texto);
+}
+
+.input-wraper input[type=text],
+.input-wraper input[type=email],
+.input-wraper input[type=tel]{
+	width: 100%;
+	height: 52px;
+	padding: 0 14px;
+	border: 1px solid var(--cor-borda);
+	border-radius: var(--raio-sm);
+	font-family: inherit;
+	font-size: 0.95rem;
+	transition: border-color var(--transicao), box-shadow var(--transicao);
+}
+
+.input-wraper textarea{
+	width: 100%;
+	height: 150px;
+	padding: 12px 14px;
+	border: 1px solid var(--cor-borda);
+	border-radius: var(--raio-sm);
+	font-family: inherit;
+	font-size: 0.95rem;
+	resize: none;
+	transition: border-color var(--transicao), box-shadow var(--transicao);
+}
+
+.input-wraper input:focus,
+.input-wraper textarea:focus{
+	outline: none;
+	border-color: var(--cor-primaria);
+	box-shadow: 0 0 0 3px rgba(214,40,40,0.16);
+}
+
+.input-wraper:last-child{
+	align-items: center;
+}
+
+.input-wraper input[type=submit]{
+	border: 0;
+	border-bottom: 3px solid var(--cor-primaria-escura);
+	line-height: 48px;
+	padding: 0 44px;
+}
+
+.form-ok{
+	width: 100%;
+	padding: 10px 2px;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+	color: var(--cor-primaria);
+}
