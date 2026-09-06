@@ -665,3 +665,57 @@ footer nav ul li a.ativo{
 	color: rgba(255,255,255,0.55);
 	font-size: 0.78rem;
 }
+
+/**Página Sobre**/
+
+section.sobre{
+	padding: var(--espaco-secao) 2%;
+}
+
+section.sobre .container{
+	max-width: 880px;
+	margin-top: 44px;
+}
+
+.img-destaque-sobre{
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: var(--raio);
+	box-shadow: var(--sombra-suave);
+}
+
+section.sobre .descricao-autor{
+	margin-top: 32px;
+}
+
+.descricao-autor h2{
+	margin: 10px 0 14px;
+	font-style: italic;
+}
+
+.descricao-autor p + p{
+	margin-top: 14px;
+}
+
+.descricao-autor2{
+	display: flex;
+	align-items: flex-start;
+	gap: 28px;
+	margin-top: 40px;
+	padding-top: 32px;
+	border-top: 1px solid var(--cor-borda);
+}
+
+.descricao-autor2 .img-small{
+	flex-shrink: 0;
+	width: 40%;
+	max-width: 320px;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: var(--raio);
+}
+
+.descricao-autor2 p{
+	flex: 1;
+}
