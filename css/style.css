@@ -1166,3 +1166,63 @@ section.venda-single .container{
 		letter-spacing: 0.18em;
 	}
 }
+
+/**Estados de foco, seleção e movimento**/
+
+::selection{
+	background-color: var(--cor-primaria);
+	color: white;
+}
+
+::placeholder{
+	color: #9a9a9a;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[type=range]:focus-visible{
+	outline: 2px solid var(--cor-primaria);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+.logo a{
+	transition: opacity var(--transicao);
+}
+
+.logo a:hover{
+	opacity: 0.8;
+}
+
+[data-revelar]{
+	opacity: 0;
+	transform: translateY(22px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-revelar].visivel{
+	opacity: 1;
+	transform: none;
+}
+
+@media (prefers-reduced-motion: reduce){
+
+	html{
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after{
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+	}
+
+	[data-revelar]{
+		opacity: 1;
+		transform: none;
+	}
+}
