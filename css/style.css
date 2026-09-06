@@ -140,11 +140,13 @@ p{
 	background-color: var(--cor-escura);
 }
 
+.line-titulo h1,
 .line-titulo h2{
 	position: relative;
 	display: inline-block;
 	padding: 0 24px;
 	background-color: var(--cor-fundo);
+	font-size: clamp(1.5rem, 3vw, 2rem);
 	font-style: italic;
 }
 
