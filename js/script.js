@@ -131,4 +131,57 @@
 		}
 	}
 
+
+	var vitrineVenda = document.querySelector(".vitrine-venda");
+
+	if(vitrineVenda){
+		var precoMax = document.querySelector("#preco-max");
+		var precoLabel = document.querySelector("#preco-label");
+		var decadas = document.querySelectorAll("input[name=decada]");
+		var carros = vitrineVenda.querySelectorAll(".vitrine-destaque");
+		var semResultado = vitrineVenda.querySelector(".sem-resultado");
+
+		function decadaSelecionada(){
+			var marcado = document.querySelector("input[name=decada]:checked");
+			return marcado ? marcado.value : "todas";
+		}
+
+		function filtra(){
+			var limite = parseInt(precoMax.value, 10);
+			var decada = decadaSelecionada();
+			var visiveis = 0;
+
+			carros.forEach(function(carro){
+				var preco = parseInt(carro.getAttribute("data-preco"), 10);
+				var ano = parseInt(carro.getAttribute("data-ano"), 10);
+				var passaPreco = preco <= limite;
+				var passaDecada = decada === "todas" || (ano >= parseInt(decada, 10) && ano <= parseInt(decada, 10) + 9);
+
+				if(passaPreco && passaDecada){
+					carro.hidden = false;
+					visiveis++;
+				}else{
+					carro.hidden = true;
+				}
+			});
+
+			if(semResultado){
+				semResultado.hidden = visiveis > 0;
+			}
+		}
+
+		if(precoMax && precoLabel){
+			precoMax.addEventListener("input", function(){
+				precoLabel.textContent = "R$ " + parseInt(precoMax.value, 10).toLocaleString("pt-BR");
+				filtra();
+			});
+		}
+
+		decadas.forEach(function(radio){
+			radio.addEventListener("change", filtra);
+		});
+
+		filtra();
+	}
+
 })();
