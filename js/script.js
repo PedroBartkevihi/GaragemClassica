@@ -184,4 +184,55 @@
 		filtra();
 	}
 
+
+	var fotoDestaque = document.querySelector("#foto-destaque");
+
+	if(fotoDestaque){
+		var miniaturas = document.querySelectorAll(".mini-img");
+		var faixa = document.querySelector(".nav-galeria-wraper");
+		var janela = document.querySelector(".nav-galeria");
+		var deslocamento = 0;
+
+		function ativaMiniatura(alvo){
+			miniaturas.forEach(function(m){ m.classList.remove("ativo"); });
+			alvo.classList.add("ativo");
+			fotoDestaque.src = alvo.src;
+			fotoDestaque.alt = alvo.alt;
+		}
+
+		miniaturas.forEach(function(m){
+			m.addEventListener("click", function(){ ativaMiniatura(m); });
+		});
+
+		if(miniaturas.length){
+			ativaMiniatura(miniaturas[0]);
+		}
+
+		function passo(){
+			if(miniaturas.length < 2) return 0;
+			return miniaturas[1].parentElement.offsetLeft - miniaturas[0].parentElement.offsetLeft;
+		}
+
+		function limite(){
+			return Math.max(0, faixa.scrollWidth - janela.clientWidth);
+		}
+
+		function move(direcao){
+			deslocamento = Math.min(Math.max(0, deslocamento + direcao * passo()), limite());
+			faixa.style.transform = "translateX(-" + deslocamento + "px)";
+		}
+
+		var setaEsq = document.querySelector(".arrow-left-nav");
+		var setaDir = document.querySelector(".arrow-right-nav");
+
+		if(setaEsq && setaDir){
+			setaEsq.addEventListener("click", function(){ move(-1); });
+			setaDir.addEventListener("click", function(){ move(1); });
+			window.addEventListener("resize", function(){
+				deslocamento = 0;
+				faixa.style.transform = "translateX(0)";
+			});
+		}
+	}
+
 })();
