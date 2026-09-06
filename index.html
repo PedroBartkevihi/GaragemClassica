@@ -2,13 +2,199 @@
 <html lang="pt-br">
 <head>
 	<title>Garagem Clássica | Compra e venda de carros clássicos</title>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<meta name="description" content="" />
+	<noscript><style>[data-revelar]{opacity:1;transform:none;}</style></noscript>
+	<meta name="description" content="Garagem Clássica — compra, venda e consultoria de carros clássicos com procedência, documentação em dia e test-drive acompanhado." />
+	<meta name="keywords" content="carros classicos,carros antigos,compra e venda,consultoria,opala,fusca,karmann ghia" />
+	<meta name="author" content="Pedro Farias" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 	<meta charset="utf-8" />
 </head>
 <body>
 
-	<script src="js/script.js"></script>
+<header id="topo">
+	<div class="container">
+		<div class="logo">
+			<a href="index.html" aria-label="Garagem Clássica - página inicial">
+				<svg class="logo-icone" viewBox="0 0 40 24" aria-hidden="true" focusable="false">
+					<path d="M3 17c0-1 .4-2 1.3-3l2.8-3.6C8.3 8.7 10 8 12 8h9.5c1.7 0 3.3.7 4.5 1.9L30 14h4c2 0 3 1 3 3v2h-4a4 4 0 0 1-8 0H15a4 4 0 0 1-8 0H3v-2z" fill="currentColor"/>
+					<circle cx="11" cy="19" r="2.4" fill="#fff"/>
+					<circle cx="29" cy="19" r="2.4" fill="#fff"/>
+				</svg>
+				<span class="logo-texto">
+					<strong>Garagem</strong>
+					<span>Clássica</span>
+				</span>
+			</a>
+		</div><!--logo-->
+
+		<nav class="desktop">
+			<button class="mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+				<span></span><span></span><span></span>
+			</button>
+			<ul id="menu">
+				<li><a class="ativo" aria-current="page" href="index.html">Home</a></li>
+				<li><a href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+		</nav><!--desktop-->
+	</div><!--container-->
+</header>
+
+<section class="banner">
+	<div class="container">
+		<div class="banner-texto" data-revelar>
+			<span class="kicker">Carros clássicos</span>
+			<h1>O clássico certo, sem dor de cabeça</h1>
+			<p>Compra, venda e consultoria de carros antigos com procedência, documentação em dia e test-drive acompanhado.</p>
+			<a class="btn1" href="venda.html">Ver veículos</a>
+		</div><!--banner-texto-->
+
+		<div class="text-banner" data-revelar>
+			<div class="text-banner-single">Consultoria</div>
+			<div class="text-banner-single">Compra</div>
+			<div class="text-banner-single">Venda</div>
+			<div class="text-banner-single">contato@garagemclassica.com.br</div>
+		</div><!--text-banner-->
+	</div><!--container-->
+</section><!--banner-->
+
+<section class="veiculos-destaque">
+	<div class="line-titulo">
+		<div class="ln1"></div>
+		<h2>Veículos em destaque</h2>
+	</div><!--line-titulo-->
+
+	<div class="container" data-revelar>
+		<div class="vitrine-destaque">
+			<img class="carro-img" src="imagens/carro-1.jpg" alt="Volkswagen Karmann-Ghia 1969 cinza" />
+			<div class="info-carro">
+				<h2>Volkswagen Karmann-Ghia</h2>
+				<p>1.6 8v &middot; Gasolina &middot; 2P &middot; Manual &middot; 1969</p>
+				<span class="preco">R$ 89.000</span>
+				<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+			</div><!--info-carro-->
+		</div><!--vitrine-destaque-->
+
+		<div class="vitrine-destaque">
+			<img class="carro-img" src="imagens/carro-2.jpg" alt="Chevrolet Opala SS 1976 prata" />
+			<div class="info-carro">
+				<h2>Chevrolet Opala SS</h2>
+				<p>4.1 6cc &middot; Gasolina &middot; 2P &middot; Manual &middot; 1976</p>
+				<span class="preco">R$ 135.000</span>
+				<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+			</div><!--info-carro-->
+		</div><!--vitrine-destaque-->
+
+		<div class="vitrine-destaque">
+			<img class="carro-img" src="imagens/carro-3.jpg" alt="Ford Maverick GT 1974 amarelo" />
+			<div class="info-carro">
+				<h2>Ford Maverick GT</h2>
+				<p>5.0 V8 &middot; Gasolina &middot; 2P &middot; Manual &middot; 1974</p>
+				<span class="preco">R$ 120.000</span>
+				<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+			</div><!--info-carro-->
+		</div><!--vitrine-destaque-->
+	</div><!--container-->
+</section><!--veiculos-destaque-->
+
+<section class="servicos-descricao">
+	<div class="half1" data-revelar>
+		<div class="half1-wraper">
+			<h2>Serviços</h2>
+			<ul>
+				<li>Compra</li>
+				<li>Venda</li>
+				<li>Consultoria de veículos</li>
+				<li>Indicação de mecânicos e peças</li>
+			</ul>
+			<a class="btn1" href="sobre.html">Saiba mais</a>
+		</div>
+	</div><!--half1-->
+
+	<div class="half2" data-revelar>
+		<h2>Depoimentos</h2>
+		<div class="depoimento-single" data-carrossel>
+			<blockquote>
+				&ldquo;O Marcelo cuidou de tudo: me buscou no aeroporto, organizou o transfer e acompanhou a vistoria e o test-drive. Comprei meu Opala sem nenhuma dor de cabeça.&rdquo;
+			</blockquote>
+			<blockquote hidden>
+				&ldquo;Vendi meu Fusca 1970 pela Garagem Clássica em duas semanas, com anúncio bem feito e sem enrolação. Recomendo.&rdquo;
+			</blockquote>
+			<blockquote hidden>
+				&ldquo;Consultoria excelente antes da compra. Me pouparam de fechar negócio com um carro de documentação irregular.&rdquo;
+			</blockquote>
+
+			<div class="navigation">
+				<div class="arrows">
+					<button class="arrow-prev" type="button" aria-label="Depoimento anterior">
+						<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</button>
+					<button class="arrow-next" type="button" aria-label="Próximo depoimento">
+						<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</button>
+				</div><!--arrows-->
+				<div class="nome-depoimento">Bruno Tavares</div>
+				<div class="nome-depoimento" hidden>Patrícia Lemos</div>
+				<div class="nome-depoimento" hidden>Anderson Reis</div>
+			</div><!--navigation-->
+		</div><!--depoimento-single-->
+	</div><!--half2-->
+</section><!--servicos-descricao-->
+
+<section class="contato" id="contato">
+	<div class="line-titulo">
+		<div class="ln1"></div>
+		<h2>Contato</h2>
+	</div><!--line-titulo-->
+
+	<form data-revelar>
+		<div class="input-wraper w100">
+			<label for="nome">Nome</label>
+			<input id="nome" placeholder="Seu nome" name="nome" type="text" required />
+		</div><!--input-wraper-->
+
+		<div class="input-wraper w50">
+			<label for="email">E-mail</label>
+			<input id="email" placeholder="voce@email.com" name="e-mail" type="email" required />
+		</div><!--input-wraper-->
+
+		<div class="input-wraper w50">
+			<label for="telefone">Telefone</label>
+			<input id="telefone" placeholder="(00) 00000-0000" name="telefone" type="tel" required />
+		</div><!--input-wraper-->
+
+		<div class="input-wraper w100">
+			<label for="mensagem">Mensagem</label>
+			<textarea id="mensagem" placeholder="Conte o que você procura" name="mensagem" required></textarea>
+		</div><!--input-wraper-->
+
+		<div class="input-wraper w100">
+			<input class="btn1" type="submit" name="acao" value="Enviar" />
+		</div><!--input-wraper-->
+	</form>
+</section><!--contato-->
+
+<footer>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a class="ativo" href="index.html">Home</a></li>
+				<li><a href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+		</nav>
+		<div class="footer-info">
+			<p>Rua dos Pinheiros, 1500 &middot; São Paulo - SP &middot; (11) 3333-4455</p>
+			<small>Projeto de estudo, sem fins comerciais. Marca e conteúdo fictícios.</small>
+		</div><!--footer-info-->
+	</div><!--container-->
+</footer>
+
+
+<script src="js/script.js"></script>
 </body>
 </html>
