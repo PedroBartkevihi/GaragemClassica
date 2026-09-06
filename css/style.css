@@ -340,3 +340,70 @@ section.banner .container{
 	text-transform: none;
 	letter-spacing: 0;
 }
+
+/**Veículos em destaque**/
+
+section.veiculos-destaque{
+	padding: var(--espaco-secao) 2%;
+}
+
+section.veiculos-destaque .container{
+	margin-top: 48px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 26px;
+}
+
+.vitrine-destaque{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--cor-borda);
+	border-radius: var(--raio);
+	overflow: hidden;
+	background-color: var(--cor-fundo);
+	transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.vitrine-destaque:hover{
+	transform: translateY(-5px);
+	box-shadow: var(--sombra);
+}
+
+.vitrine-destaque .carro-img{
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+	background-color: var(--cor-fundo-alt);
+}
+
+.vitrine-destaque .info-carro{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex-grow: 1;
+	padding: 22px 22px 24px;
+}
+
+.vitrine-destaque h2{
+	font-size: 1.2rem;
+	font-style: italic;
+}
+
+.vitrine-destaque p{
+	margin-top: 6px;
+	font-size: 0.88rem;
+}
+
+.vitrine-destaque .preco{
+	display: block;
+	margin: 14px 0 18px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.35rem;
+	font-weight: 600;
+	font-style: italic;
+	color: var(--cor-primaria);
+}
+
+.vitrine-destaque .btn1{
+	margin-top: auto;
+}
