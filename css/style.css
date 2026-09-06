@@ -150,8 +150,6 @@ p{
 	font-style: italic;
 }
 
-/**Header do site**/
-
 header{
 	position: sticky;
 	top: 0;
@@ -268,8 +266,6 @@ header nav.desktop ul li a.ativo{
 	transition: transform var(--transicao), opacity var(--transicao);
 }
 
-/**Banner (hero)**/
-
 section.banner{
 	position: relative;
 	overflow: hidden;
@@ -343,8 +339,6 @@ section.banner .container{
 	letter-spacing: 0;
 }
 
-/**Veículos em destaque**/
-
 section.veiculos-destaque{
 	padding: var(--espaco-secao) 2%;
 }
@@ -409,8 +403,6 @@ section.veiculos-destaque .container{
 .vitrine-destaque .btn1{
 	margin-top: auto;
 }
-
-/**Serviços + depoimentos**/
 
 section.servicos-descricao{
 	display: flex;
@@ -527,8 +519,6 @@ section.servicos-descricao{
 	color: rgba(255,255,255,0.85);
 }
 
-/**Contato**/
-
 section.contato{
 	padding: var(--espaco-secao) 2%;
 }
@@ -616,8 +606,6 @@ section.contato form{
 	color: var(--cor-primaria);
 }
 
-/**Footer**/
-
 footer{
 	padding: 44px 2%;
 	background-color: var(--cor-escura);
@@ -667,8 +655,6 @@ footer nav ul li a.ativo{
 	color: rgba(255,255,255,0.55);
 	font-size: 0.78rem;
 }
-
-/**Página Sobre**/
 
 section.sobre{
 	padding: var(--espaco-secao) 2%;
@@ -721,8 +707,6 @@ section.sobre .descricao-autor{
 .descricao-autor2 p{
 	flex: 1;
 }
-
-/**Página Venda**/
 
 section.venda{
 	padding: var(--espaco-secao) 2%;
@@ -836,8 +820,6 @@ section.venda{
 	font-style: italic;
 	color: var(--cor-texto-suave);
 }
-
-/**Página Veículo**/
 
 section.venda-single{
 	padding: var(--espaco-secao) 2%;
@@ -1000,8 +982,6 @@ section.venda-single .container{
 .descricao-veiculo p{
 	margin-bottom: 24px;
 }
-
-/**Responsividade**/
 
 @media screen and (max-width: 1024px){
 
@@ -1168,8 +1148,6 @@ section.venda-single .container{
 		letter-spacing: 0.18em;
 	}
 }
-
-/**Estados de foco, seleção e movimento**/
 
 ::selection{
 	background-color: var(--cor-primaria);
