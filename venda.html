@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Venda | Garagem Clássica</title>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<noscript><style>[data-revelar]{opacity:1;transform:none;}</style></noscript>
+	<meta name="description" content="Carros clássicos à venda na Garagem Clássica — filtre por preço e por década e encontre o seu." />
+	<meta name="author" content="Pedro Farias" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta charset="utf-8" />
+</head>
+<body>
+
+<header id="topo">
+	<div class="container">
+		<div class="logo">
+			<a href="index.html" aria-label="Garagem Clássica - página inicial">
+				<svg class="logo-icone" viewBox="0 0 40 24" aria-hidden="true" focusable="false">
+					<path d="M3 17c0-1 .4-2 1.3-3l2.8-3.6C8.3 8.7 10 8 12 8h9.5c1.7 0 3.3.7 4.5 1.9L30 14h4c2 0 3 1 3 3v2h-4a4 4 0 0 1-8 0H15a4 4 0 0 1-8 0H3v-2z" fill="currentColor"/>
+					<circle cx="11" cy="19" r="2.4" fill="#fff"/>
+					<circle cx="29" cy="19" r="2.4" fill="#fff"/>
+				</svg>
+				<span class="logo-texto">
+					<strong>Garagem</strong>
+					<span>Clássica</span>
+				</span>
+			</a>
+		</div><!--logo-->
+
+		<nav class="desktop">
+			<button class="mobile" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+				<span></span><span></span><span></span>
+			</button>
+			<ul id="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a class="ativo" aria-current="page" href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="index.html#contato">Contato</a></li>
+			</ul>
+		</nav><!--desktop-->
+	</div><!--container-->
+</header>
+
+<section class="venda">
+	<div class="line-titulo">
+		<div class="ln1"></div>
+		<h2>Venda</h2>
+	</div><!--line-titulo-->
+
+	<div class="content-venda">
+		<div class="container">
+			<div class="sidebar" data-revelar>
+				<div class="search1">
+					<h2>Filtre por preço</h2>
+					<input type="range" id="preco-max" min="0" max="200000" step="5000" value="200000" aria-label="Preço máximo" />
+					<div class="valor-pesquisa">
+						<p>R$ 0</p>
+						<p id="preco-label">R$ 200.000</p>
+						<div class="clear"></div>
+					</div><!--valor-pesquisa-->
+				</div><!--search1-->
+
+				<div class="search2">
+					<h2>Filtre por década</h2>
+					<form>
+						<div class="form-venda-wraper">
+							<input type="radio" name="decada" id="dec-todas" value="todas" checked />
+							<label for="dec-todas"><span class="circle"></span></label>
+							<span>Todas as décadas</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="radio" name="decada" id="dec-50" value="1950" />
+							<label for="dec-50"><span class="circle"></span></label>
+							<span>1950 - 1969</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="radio" name="decada" id="dec-70" value="1970" />
+							<label for="dec-70"><span class="circle"></span></label>
+							<span>1970 - 1979</span>
+						</div><!--form-venda-wraper-->
+
+						<div class="form-venda-wraper">
+							<input type="radio" name="decada" id="dec-80" value="1980" />
+							<label for="dec-80"><span class="circle"></span></label>
+							<span>1980 - 1989</span>
+						</div><!--form-venda-wraper-->
+					</form>
+				</div><!--search2-->
+			</div><!--sidebar-->
+
+			<div class="vitrine-venda" data-revelar>
+				<div class="vitrine-destaque" data-ano="1966" data-preco="165000">
+					<img class="carro-img" src="imagens/carro-1.jpg" alt="Ford Galaxie 500 preto, ano 1966" />
+					<div class="info-carro">
+						<h2>Ford Galaxie 500</h2>
+						<p>1966 &middot; 4.8 V8 &middot; Gasolina &middot; 4P &middot; Automático</p>
+						<span class="preco">R$ 165.000</span>
+						<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque" data-ano="1971" data-preco="148000">
+					<img class="carro-img" src="imagens/carro-2.jpg" alt="Alfa Romeo GT 1750 vermelho, ano 1971" />
+					<div class="info-carro">
+						<h2>Alfa Romeo GT 1750</h2>
+						<p>1971 &middot; 1.8 &middot; Gasolina &middot; 2P &middot; Manual</p>
+						<span class="preco">R$ 148.000</span>
+						<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque" data-ano="1972" data-preco="95000">
+					<img class="carro-img" src="imagens/carro-3.jpg" alt="Mercedes-Benz W114 azul-claro, ano 1972" />
+					<div class="info-carro">
+						<h2>Mercedes-Benz 280 C</h2>
+						<p>1972 &middot; 2.8 6cc &middot; Gasolina &middot; 2P &middot; Manual</p>
+						<span class="preco">R$ 95.000</span>
+						<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque" data-ano="1982" data-preco="82000">
+					<img class="carro-img" src="imagens/carro-4.jpg" alt="Mercedes-Benz W123 azul, ano 1982" />
+					<div class="info-carro">
+						<h2>Mercedes-Benz 280</h2>
+						<p>1982 &middot; 2.8 6cc &middot; Gasolina &middot; 4P &middot; Manual</p>
+						<span class="preco">R$ 82.000</span>
+						<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque" data-ano="1954" data-preco="110000">
+					<img class="carro-img" src="imagens/carro-5.jpg" alt="Picape Studebaker preta customizada, ano 1954" />
+					<div class="info-carro">
+						<h2>Studebaker Pickup</h2>
+						<p>1954 &middot; V8 &middot; Gasolina &middot; 2P &middot; Manual &middot; Custom</p>
+						<span class="preco">R$ 110.000</span>
+						<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<div class="vitrine-destaque" data-ano="1974" data-preco="42000">
+					<img class="carro-img" src="imagens/carro-6.jpg" alt="Moskvitch 412 laranja, ano 1974" />
+					<div class="info-carro">
+						<h2>Moskvitch 412</h2>
+						<p>1974 &middot; 1.5 &middot; Gasolina &middot; 4P &middot; Manual</p>
+						<span class="preco">R$ 42.000</span>
+						<a class="btn1" href="veiculo-teste.html">Mais detalhes</a>
+					</div><!--info-carro-->
+				</div><!--vitrine-destaque-->
+
+				<p class="sem-resultado" hidden>Nenhum veículo encontrado com esses filtros.</p>
+			</div><!--vitrine-venda-->
+
+			<div class="clear"></div>
+		</div><!--container-->
+	</div><!--content-venda-->
+</section><!--venda-->
+
+<footer>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a class="ativo" href="venda.html">Venda</a></li>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="index.html#contato">Contato</a></li>
+			</ul>
+		</nav>
+		<div class="footer-info">
+			<p>Rua dos Pinheiros, 1500 &middot; São Paulo - SP &middot; (11) 3333-4455</p>
+			<small>Projeto de estudo, sem fins comerciais. Marca e conteúdo fictícios.</small>
+		</div><!--footer-info-->
+	</div><!--container-->
+</footer>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

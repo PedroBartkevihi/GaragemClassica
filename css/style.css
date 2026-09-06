@@ -719,3 +719,118 @@ section.sobre .descricao-autor{
 .descricao-autor2 p{
 	flex: 1;
 }
+
+/**Página Venda**/
+
+section.venda{
+	padding: var(--espaco-secao) 2%;
+}
+
+.content-venda{
+	margin-top: 44px;
+}
+
+.content-venda .container{
+	display: grid;
+	grid-template-columns: 260px 1fr;
+	gap: 36px;
+	align-items: start;
+}
+
+.sidebar{
+	position: sticky;
+	top: 96px;
+	padding: 24px;
+	border: 1px solid var(--cor-borda);
+	border-radius: var(--raio);
+	background-color: var(--cor-fundo-alt);
+}
+
+.sidebar h2{
+	font-size: 1.05rem;
+	font-style: italic;
+}
+
+.search1 input[type=range]{
+	width: 100%;
+	margin-top: 16px;
+	accent-color: var(--cor-primaria);
+	cursor: pointer;
+}
+
+.valor-pesquisa{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8px;
+}
+
+.valor-pesquisa p{
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.9rem;
+	color: var(--cor-texto);
+}
+
+.search2{
+	margin-top: 32px;
+}
+
+.form-venda-wraper{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 12px;
+}
+
+.form-venda-wraper input[type=radio]{
+	display: none;
+}
+
+.form-venda-wraper label{
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #b9b9b9;
+	border-radius: 4px;
+	background-color: white;
+	cursor: pointer;
+	transition: border-color var(--transicao);
+}
+
+.form-venda-wraper .circle{
+	width: 10px;
+	height: 10px;
+	border-radius: 3px;
+	background-color: var(--cor-primaria);
+	transform: scale(0);
+	transition: transform var(--transicao);
+}
+
+.form-venda-wraper input[type=radio]:checked + label{
+	border-color: var(--cor-primaria);
+}
+
+.form-venda-wraper input[type=radio]:checked + label .circle{
+	transform: scale(1);
+}
+
+.form-venda-wraper span{
+	font-size: 0.95rem;
+}
+
+.vitrine-venda{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 24px;
+}
+
+.vitrine-venda .sem-resultado{
+	grid-column: 1 / -1;
+	padding: 40px 0;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+	color: var(--cor-texto-suave);
+}
