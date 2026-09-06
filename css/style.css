@@ -834,3 +834,167 @@ section.venda{
 	font-style: italic;
 	color: var(--cor-texto-suave);
 }
+
+/**Página Veículo**/
+
+section.venda-single{
+	padding: var(--espaco-secao) 2%;
+}
+
+section.venda-single .container{
+	margin-top: 44px;
+	display: grid;
+	grid-template-columns: 1.35fr 1fr;
+	gap: 44px;
+	align-items: start;
+}
+
+.info-bread{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 16px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.78rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.info-bread a{
+	color: var(--cor-texto-suave);
+}
+
+.info-bread a:last-child{
+	color: var(--cor-primaria);
+}
+
+.info-bread span{
+	color: var(--cor-borda);
+}
+
+.foto-destaque{
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+	border-radius: var(--raio);
+	box-shadow: var(--sombra-suave);
+	background-color: var(--cor-fundo-alt);
+}
+
+.nav-galeria-parent{
+	position: relative;
+	margin-top: 14px;
+	padding: 0 40px;
+}
+
+.nav-galeria{
+	overflow: hidden;
+}
+
+.nav-galeria-wraper{
+	display: flex;
+	gap: 12px;
+	transition: transform 0.35s ease;
+}
+
+.mini-img-wraper{
+	flex: 0 0 calc((100% - 36px) / 4);
+}
+
+.mini-img{
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+	border-radius: var(--raio-sm);
+	cursor: pointer;
+	opacity: 0.55;
+	transition: opacity var(--transicao), outline-color var(--transicao);
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
+
+.mini-img:hover{
+	opacity: 0.85;
+}
+
+.mini-img.ativo{
+	opacity: 1;
+	outline-color: var(--cor-primaria);
+}
+
+.arrow-left-nav,
+.arrow-right-nav{
+	position: absolute;
+	top: calc(50% - 16px);
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	border: 2px solid var(--cor-borda);
+	border-radius: var(--raio-sm);
+	background-color: white;
+	cursor: pointer;
+	transition: border-color var(--transicao), background-color var(--transicao);
+}
+
+.arrow-left-nav{ left: 0; }
+.arrow-right-nav{ right: 0; }
+
+.arrow-left-nav::before,
+.arrow-right-nav::before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	border: solid var(--cor-texto);
+	border-width: 2px 2px 0 0;
+}
+
+.arrow-left-nav::before{
+	transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+.arrow-right-nav::before{
+	transform: translate(-70%, -50%) rotate(45deg);
+}
+
+.arrow-left-nav:hover,
+.arrow-right-nav:hover{
+	border-color: var(--cor-primaria);
+}
+
+.descricao-veiculo .kicker{
+	color: var(--cor-primaria);
+}
+
+.descricao-veiculo h2{
+	margin: 6px 0 18px;
+	font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+	font-style: italic;
+	color: var(--cor-primaria);
+}
+
+.descricao-veiculo .ficha{
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.descricao-veiculo .ficha li{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--cor-borda);
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.95rem;
+}
+
+.descricao-veiculo .ficha li span{
+	color: var(--cor-texto-suave);
+	font-style: italic;
+}
+
+.descricao-veiculo p{
+	margin-bottom: 24px;
+}
