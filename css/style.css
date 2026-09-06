@@ -4,6 +4,146 @@
 	box-sizing: border-box;
 }
 
+:root{
+	--cor-primaria: #d62828;
+	--cor-primaria-escura: #a01e1e;
+	--cor-escura: #1e1e1e;
+	--cor-escura-2: #262626;
+
+	--cor-texto: #222222;
+	--cor-texto-suave: #6a6a6a;
+	--cor-fundo: #ffffff;
+	--cor-fundo-alt: #f4f4f4;
+	--cor-borda: #e3e3e3;
+
+	--espaco-secao: clamp(56px, 9vw, 110px);
+	--raio: 8px;
+	--raio-sm: 5px;
+	--sombra: 0 14px 34px rgba(0,0,0,0.14);
+	--sombra-suave: 0 6px 18px rgba(0,0,0,0.08);
+	--transicao: 0.25s ease;
+	--max-largura: 1240px;
+}
+
+html{
+	scroll-behavior: smooth;
+	scroll-padding-top: 90px;
+}
+
 html,body{
 	height: 100%;
+}
+
+body{
+	font-family: 'Barlow', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--cor-texto);
+	background-color: var(--cor-fundo);
+	overflow-x: hidden;
+}
+
+img{
+	max-width: 100%;
+	display: block;
+}
+
+a{
+	color: var(--cor-primaria);
+	text-decoration: none;
+	transition: color var(--transicao);
+}
+
+h1,h2,h3{
+	font-family: 'Oswald', 'Barlow', sans-serif;
+	font-weight: 600;
+	line-height: 1.15;
+	text-transform: uppercase;
+	color: var(--cor-texto);
+}
+
+h1{
+	font-size: clamp(2rem, 5.5vw, 3.4rem);
+}
+
+h2{
+	font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p{
+	color: var(--cor-texto-suave);
+}
+
+.container{
+	width: 100%;
+	max-width: var(--max-largura);
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+.clear{
+	clear: both;
+}
+
+.kicker{
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.85rem;
+	font-weight: 600;
+	font-style: italic;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--cor-primaria);
+}
+
+.btn1{
+	display: inline-block;
+	padding: 0 28px;
+	line-height: 44px;
+	background-color: var(--cor-primaria);
+	border-bottom: 3px solid var(--cor-primaria-escura);
+	border-radius: var(--raio-sm);
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 0.95rem;
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	cursor: pointer;
+	transition: background-color var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+}
+
+.btn1:hover{
+	background-color: var(--cor-primaria-escura);
+	color: white;
+	transform: translateY(-2px);
+	box-shadow: var(--sombra-suave);
+}
+
+.btn1:active{
+	transform: translateY(0);
+}
+
+.line-titulo{
+	max-width: var(--max-largura);
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+
+.ln1{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 2px;
+	background-color: var(--cor-escura);
+}
+
+.line-titulo h2{
+	position: relative;
+	display: inline-block;
+	padding: 0 24px;
+	background-color: var(--cor-fundo);
+	font-style: italic;
 }
