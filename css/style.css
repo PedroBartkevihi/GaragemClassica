@@ -613,3 +613,55 @@ section.contato form{
 	font-style: italic;
 	color: var(--cor-primaria);
 }
+
+/**Footer**/
+
+footer{
+	padding: 44px 2%;
+	background-color: var(--cor-escura);
+	color: white;
+}
+
+footer .container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px 40px;
+	flex-wrap: wrap;
+}
+
+footer nav ul{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 10px;
+	list-style-type: none;
+}
+
+footer nav ul li a{
+	display: block;
+	padding: 6px 14px;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+footer nav ul li a:hover,
+footer nav ul li a.ativo{
+	color: var(--cor-primaria);
+}
+
+.footer-info{
+	text-align: right;
+}
+
+.footer-info p{
+	color: rgba(255,255,255,0.8);
+	font-size: 0.9rem;
+}
+
+.footer-info small{
+	color: rgba(255,255,255,0.55);
+	font-size: 0.78rem;
+}
