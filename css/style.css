@@ -998,3 +998,171 @@ section.venda-single .container{
 .descricao-veiculo p{
 	margin-bottom: 24px;
 }
+
+/**Responsividade**/
+
+@media screen and (max-width: 1024px){
+
+	.content-venda .container{
+		grid-template-columns: 220px 1fr;
+		gap: 26px;
+	}
+
+	.vitrine-venda{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	section.venda-single .container{
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+}
+
+@media screen and (max-width: 900px){
+
+	.mobile{
+		display: block;
+	}
+
+	header nav.desktop{
+		position: relative;
+	}
+
+	header nav.desktop ul{
+		position: absolute;
+		right: 0;
+		top: calc(100% + 18px);
+		flex-direction: column;
+		align-items: stretch;
+		gap: 2px;
+		width: min(280px, 76vw);
+		padding: 10px;
+		border: 1px solid var(--cor-borda);
+		border-top: 3px solid var(--cor-primaria);
+		border-radius: var(--raio-sm);
+		background-color: var(--cor-fundo);
+		box-shadow: var(--sombra);
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+		transition: opacity var(--transicao), transform var(--transicao), visibility var(--transicao);
+	}
+
+	header nav.desktop ul.aberto{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	header nav.desktop ul li a{
+		padding: 12px 14px;
+	}
+
+	header nav.desktop ul li a::after{
+		display: none;
+	}
+
+	header nav.desktop ul li a:hover{
+		color: var(--cor-primaria);
+	}
+
+	.mobile.ativo span:nth-child(1){
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.mobile.ativo span:nth-child(2){
+		opacity: 0;
+	}
+
+	.mobile.ativo span:nth-child(3){
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	section.banner .container{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 36px;
+	}
+
+	.text-banner{
+		align-self: stretch;
+	}
+
+	.text-banner-single{
+		align-self: flex-start;
+	}
+
+	section.veiculos-destaque .container{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 768px){
+
+	section.servicos-descricao{
+		flex-direction: column;
+	}
+
+	.servicos-descricao .half1{
+		justify-content: flex-start;
+	}
+
+	.content-venda .container{
+		grid-template-columns: 1fr;
+	}
+
+	.sidebar{
+		position: static;
+	}
+
+	.w50{
+		width: 100%;
+	}
+
+	footer .container{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer-info{
+		text-align: center;
+	}
+
+	.descricao-autor2{
+		flex-direction: column;
+	}
+
+	.descricao-autor2 .img-small{
+		width: 100%;
+		max-width: none;
+	}
+}
+
+@media screen and (max-width: 560px){
+
+	section.veiculos-destaque .container,
+	.vitrine-venda{
+		grid-template-columns: 1fr;
+	}
+
+	.mini-img-wraper{
+		flex-basis: calc((100% - 24px) / 3);
+	}
+
+	.text-banner-single{
+		padding: 10px 20px;
+		font-size: 0.9rem;
+	}
+}
+
+@media screen and (max-width: 480px){
+
+	.logo-texto strong{
+		font-size: 1.15rem;
+	}
+
+	.logo-texto span{
+		font-size: 0.64rem;
+		letter-spacing: 0.18em;
+	}
+}
