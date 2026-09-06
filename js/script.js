@@ -108,4 +108,27 @@
 		});
 	}
 
+
+	var carrossel = document.querySelector("[data-carrossel]");
+
+	if(carrossel){
+		var frases = carrossel.querySelectorAll("blockquote");
+		var nomes = carrossel.querySelectorAll(".nome-depoimento");
+		var atual = 0;
+
+		function mostraDepoimento(indice){
+			atual = (indice + frases.length) % frases.length;
+			frases.forEach(function(el, i){ el.hidden = (i !== atual); });
+			nomes.forEach(function(el, i){ el.hidden = (i !== atual); });
+		}
+
+		var anterior = carrossel.querySelector(".arrow-prev");
+		var proximo = carrossel.querySelector(".arrow-next");
+
+		if(anterior && proximo){
+			anterior.addEventListener("click", function(){ mostraDepoimento(atual - 1); });
+			proximo.addEventListener("click", function(){ mostraDepoimento(atual + 1); });
+		}
+	}
+
 })();
