@@ -1,6 +1,6 @@
 # Garagem Clássica — Site de carros clássicos (projeto de estudo)
 
-**Ver online:** https://pedrobartkevihi.github.io/SiteCarros/
+**Ver online:** https://pedrobartkevihi.github.io/GaragemClassica/
 
 Site **fictício** de uma loja de compra e venda de carros clássicos, criado
 **para fins de estudo**. Partindo de um exercício de curso feito só com HTML e
