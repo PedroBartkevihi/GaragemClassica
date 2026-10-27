@@ -10,7 +10,8 @@ estrutura de várias páginas e o estilo de escrita do código original.
 
 A loja **Garagem Clássica**, os veículos, os depoimentos e os dados de contato
 e endereço são inventados para este projeto e não correspondem a nenhuma
-pessoa ou empresa real.
+pessoa ou empresa real. Os contatos são apenas demonstrativos: telefone
+`(11) 0000-0000`, e-mail no domínio reservado `.example` e endereço fictício.
 
 ## Tecnologias
 
